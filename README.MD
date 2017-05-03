@@ -7,3 +7,4 @@ Be sure that you've set your:
 * JAVA_HOME correctly configured
 * Maven is installed
 * Git is installed :-)
+* Could be edited with IntelliJ
