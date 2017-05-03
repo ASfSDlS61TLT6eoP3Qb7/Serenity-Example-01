@@ -7,6 +7,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import steps.MyFirstSteps;
+import tasks.OpenGoogle;
+import tasks.SearchTheInternet;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.givenThat;
 
@@ -30,13 +32,22 @@ public class TestWithScreenplayPattern {
     }
 
     @Test
-    @WithTag("Current")
     public void openGoogleWithActorInStep() {
         myFirstSteps.openGoogleWithActor();
     }
 
     @Test public void testCase2() {
         Actor mark = Actor.named("Mark");
-        givenThat(mark).wasAbleTo();
+        mark.can(BrowseTheWeb.with(firefox));
+
+        givenThat(mark).wasAbleTo(OpenGoogle.onTheHomePage());
+    }
+
+    @WithTag("Current")
+    @Test public void testCase3() {
+        Actor mark = Actor.named("Mark");
+        mark.can(BrowseTheWeb.with(firefox));
+
+        givenThat(mark).wasAbleTo(SearchTheInternet.forKeyword("Tralalala"));
     }
 }
