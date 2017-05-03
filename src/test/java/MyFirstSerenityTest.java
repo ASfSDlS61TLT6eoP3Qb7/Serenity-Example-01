@@ -1,5 +1,4 @@
 import net.serenitybdd.junit.runners.SerenityRunner;
-import net.thucydides.core.annotations.Pending;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -8,9 +7,12 @@ public class MyFirstSerenityTest {
 
     @Test
     public void testCase001() {
-        System.out.println("Hello World!");
+        int i = 0;
+        int j = 1;
+
+
     }
 
-    @Pending
+    @Test
     public void testCase002() {}
 }
