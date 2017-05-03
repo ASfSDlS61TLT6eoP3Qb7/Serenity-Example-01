@@ -80,6 +80,9 @@
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <skip>false</skip>
+                    <includes>
+                        <include>*Test*.java</include>
+                    </includes>
                 </configuration>
             </plugin>
             <plugin>
