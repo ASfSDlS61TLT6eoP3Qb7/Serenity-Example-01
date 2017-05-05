@@ -50,4 +50,17 @@ public class TestWithScreenplayPattern {
 
         givenThat(mark).wasAbleTo(SearchTheInternet.forKeyword("Tralalala"));
     }
+
+    @Test
+    @Pending
+    public void testWithMultipleActors() {
+        Actor jan = Actor.named("Jan");
+        jan.can(BrowseTheWeb.with(firefox));
+
+        Actor mark = Actor.named("Mark");
+        mark.can(BrowseTheWeb.with(firefox));
+
+        givenThat(jan).wasAbleTo(SearchTheInternet.forKeyword("Tralalala"));
+        givenThat(mark).wasAbleTo(SearchTheInternet.forKeyword("Tralalala"));
+    }
 }
