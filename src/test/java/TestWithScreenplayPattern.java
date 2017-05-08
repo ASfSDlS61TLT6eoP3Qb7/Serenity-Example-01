@@ -43,7 +43,6 @@ public class TestWithScreenplayPattern {
         givenThat(mark).wasAbleTo(OpenGoogle.onTheHomePage());
     }
 
-    @WithTag("Current")
     @Test public void testCase3() {
         Actor mark = Actor.named("Mark");
         mark.can(BrowseTheWeb.with(firefox));

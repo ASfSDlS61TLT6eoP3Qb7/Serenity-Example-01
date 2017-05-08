@@ -20,7 +20,6 @@ public class TestsWithScreenshots {
 
     @Test
     @BlurScreenshots(value = BlurLevel.HEAVY)
-    @WithTag("Current")
     public void testCaseWithBlurryScreenshot() {
         myFirstSteps.openGoogleHomepage();
     }

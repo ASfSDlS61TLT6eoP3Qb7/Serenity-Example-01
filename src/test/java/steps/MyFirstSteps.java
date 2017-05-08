@@ -7,6 +7,7 @@ import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.WebDriver;
 import pageobjects.GoogleHomePage;
+import pageobjects.NuHomePage;
 
 public class MyFirstSteps {
 
@@ -14,6 +15,7 @@ public class MyFirstSteps {
     WebDriver driver;
 
     GoogleHomePage googleHomePage;
+    NuHomePage nuHomePage;
 
     @Step("take my first step")
     public void take_my_first_step() {
@@ -22,7 +24,7 @@ public class MyFirstSteps {
 
     @Step("Go to url")
     public void go_to(String url) {
-        googleHomePage.open();
+        driver.navigate().to(url);
     }
 
     @Step
@@ -35,5 +37,10 @@ public class MyFirstSteps {
         Actor mark = Actor.named("mark");
         mark.can(BrowseTheWeb.with(driver));
         mark.attemptsTo(Open.url("http://www.google.nl/"));
+    }
+
+    @Step
+    public void openNuHomePage() {
+        nuHomePage.open();
     }
 }
