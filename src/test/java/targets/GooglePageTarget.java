@@ -1,4 +1,4 @@
-package tasks.targets;
+package targets;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;

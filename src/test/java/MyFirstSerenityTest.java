@@ -40,7 +40,6 @@ public class MyFirstSerenityTest {
     public void testCaseThatIsIgnored() {}
 
     @Test
-    @WithTag("Current")
     public void testWhichStopsAndStartsWebDriver() {
         myFirstSteps.openNuHomePage();
         myFirstSteps.openGoogleHomepage();

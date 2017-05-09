@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Open;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.Keys;
-import tasks.targets.GooglePageTarget;
+import targets.GooglePageTarget;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
